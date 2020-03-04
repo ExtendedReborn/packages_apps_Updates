@@ -29,6 +29,9 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
 
+import androidx.core.app.NotificationCompat;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
 import org.extendedui.ota.R;
 import org.extendedui.ota.UpdaterReceiver;
 import org.extendedui.ota.UpdatesActivity;
@@ -36,9 +39,6 @@ import org.extendedui.ota.misc.StringGenerator;
 import org.extendedui.ota.misc.Utils;
 import org.extendedui.ota.model.UpdateInfo;
 import org.extendedui.ota.model.UpdateStatus;
-
-import androidx.core.app.NotificationCompat;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import java.io.IOException;
 import java.text.NumberFormat;
@@ -502,12 +502,6 @@ public class UpdaterService extends Service {
         return PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
     }
 
-    public class LocalBinder extends Binder {
-        public UpdaterService getService() {
-            return UpdaterService.this;
-        }
-    }
-
     private PendingIntent getSuspendInstallationPendingIntent() {
         final Intent intent = new Intent(this, UpdaterService.class);
         intent.setAction(ACTION_INSTALL_SUSPEND);
@@ -520,5 +514,11 @@ public class UpdaterService extends Service {
         intent.setAction(ACTION_INSTALL_RESUME);
         return PendingIntent.getService(this, 0, intent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
+    }
+
+    public class LocalBinder extends Binder {
+        public UpdaterService getService() {
+            return UpdaterService.this;
+        }
     }
 }

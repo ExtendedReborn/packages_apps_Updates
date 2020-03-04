@@ -24,14 +24,14 @@ import android.os.PowerManager;
 import android.os.SystemClock;
 import android.util.Log;
 
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
 import org.extendedui.ota.UpdatesDbHelper;
 import org.extendedui.ota.download.DownloadClient;
 import org.extendedui.ota.misc.Utils;
 import org.extendedui.ota.model.Update;
 import org.extendedui.ota.model.UpdateInfo;
 import org.extendedui.ota.model.UpdateStatus;
-
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import java.io.File;
 import java.io.IOException;

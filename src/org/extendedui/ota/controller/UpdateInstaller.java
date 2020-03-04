@@ -23,13 +23,13 @@ import android.os.SystemClock;
 import android.os.SystemProperties;
 import android.util.Log;
 
+import androidx.preference.PreferenceManager;
+
 import org.extendedui.ota.misc.Constants;
 import org.extendedui.ota.misc.FileUtils;
 import org.extendedui.ota.misc.Utils;
 import org.extendedui.ota.model.UpdateInfo;
 import org.extendedui.ota.model.UpdateStatus;
-
-import androidx.preference.PreferenceManager;
 
 import java.io.File;
 import java.io.IOException;
