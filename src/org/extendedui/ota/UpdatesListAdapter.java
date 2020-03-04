@@ -48,7 +48,7 @@ import org.extendedui.ota.misc.Utils;
 import org.extendedui.ota.model.UpdateInfo;
 import org.extendedui.ota.model.UpdateStatus;
 
-import androidx.appcompat.app.AlertDialog;
+import android.app.AlertDialog;
 import androidx.appcompat.view.ContextThemeWrapper;
 import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.appcompat.view.menu.MenuPopupHelper;
