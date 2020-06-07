@@ -37,6 +37,5 @@ public final class Constants {
     static final String PROP_VERSION_CODE = "org.extendedui.ota.version_code";
     static final String OTA_URL = "https://raw.githubusercontent.com/ShapeShiftOS/Updater-stuff/master/%s.json";
     static final String DOWNLOAD_WEBPAGE_URL = "https://raw.githubusercontent.com/ShapeShiftOS/Updater-stuff/master/%s.md";
-    public static final String DOWNLOAD_PATH = "/data/system_updates/";
     static final String EXPORT_PATH = "extendedui-Updates/";
 }
